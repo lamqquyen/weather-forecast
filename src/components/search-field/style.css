@@ -1,6 +1,6 @@
 .input__suggestion-wrapper {
   width: 100%;
-  height: 300px;
+  max-height: 400px;
   overflow-y: auto;
   position: absolute;
   top: 42px;
@@ -10,13 +10,24 @@
 .input__suggestion-option {
   width: 100%;
   height: 40px;
+  text-align: left;
   display: flex;
   align-items: center;
-  border: rgb(222 222 222) solid 1px;
+  border: rgb(230, 230, 230) solid 1px;
   padding: 10px;
-  background-color:rgba(255, 255, 255, 0.9);
+  background-color:rgb(250, 250, 250);
 }
+
+
+.input__suggestion-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
 
 .input__suggestion-option:hover {
   background: white;
+  box-shadow: inset -2px 1px 2px 0px lightgrey;
 }

@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux'
-import locationQuery from './location-query'
+import location from './location'
+import weather from './weather'
 
 export default combineReducers({
-  locationQuery
+  location,
+  weather
 })
