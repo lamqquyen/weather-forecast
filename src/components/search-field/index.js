@@ -47,7 +47,7 @@ const SearchField = (props) => {
   }, [value]);
 
   const locationSelection = locations.map((location) => {
-    const { woeid, title, location_type } = location;
+    const {woeid, title, location_type} = location;
     return (
       <div
         key={woeid}

@@ -11,6 +11,7 @@ import {debounce} from 'lodash'
 const WeatherForecastCard = () => {
   const [keyword, setKeyword] = useState('')
   const queryResults = useSelector(state => state.location.queryResults)
+  const weatherInfo = useSelector(state => state.weather.info)
   const dispatch = useDispatch()
   
   const onDebouncedQuery = useCallback(
@@ -49,7 +50,7 @@ const WeatherForecastCard = () => {
       </Row>
       <Row>
         <Col md={{span: 10, offset: 1}}>
-          <WeatherBlock></WeatherBlock>
+          <WeatherBlock info={weatherInfo}/>
         </Col>
       </Row>
     </div>

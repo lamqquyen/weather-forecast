@@ -1,4 +1,4 @@
-import keyMirror from "keymirror";
+import keyMirror from 'keymirror';
 
 export const ENTER_KEY_CODE = 13;
 
@@ -17,3 +17,11 @@ export const API_URL = {
 };
 
 export const ICON_URL = `${BASE_URL}/static/img/weather/{:weather_state_abbr}.svg`
+
+export const DAYS_OF_WEEK = {
+  SHORT: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
+  LONG: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+}
+
+export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December']
