@@ -1,4 +1,4 @@
-import {ACTION_TYPES, API_URL} from "../core/constants";
+import {ACTION_TYPES, API_URL} from "../core/constants"
 
 export const getWeatherInformation = (woeid) => async (dispatch) => {
   fetch(

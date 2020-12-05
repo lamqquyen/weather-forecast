@@ -1,3 +1,4 @@
+import React from 'react'
 import WeatherForecastCard from '../core/weather-forecast-card'
 import './style.css'
 

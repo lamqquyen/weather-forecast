@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
-import PropTypes from 'prop-types';
-import { InputGroup, FormControl } from 'react-bootstrap';
+import React, {useEffect, useState, useRef} from 'react'
+import PropTypes from 'prop-types'
+import {InputGroup, FormControl} from 'react-bootstrap'
 import './style.css';
-import {noop} from 'lodash';
+import {noop} from 'lodash'
 import LoadingSpinner from '../loading-spinner'
 
 const SearchField = (props) => {
