@@ -2,10 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { InputGroup, FormControl } from 'react-bootstrap';
 import './style.css';
-import { noop } from 'lodash';
+import {noop} from 'lodash';
+import LoadingSpinner from '../loading-spinner'
 
 const SearchField = (props) => {
-  const {className, value, onChange, onSelect, queryResults} = props;
+  const {className, value, onChange, onSelect, queryResults, loading} = props;
   const [locations, setLocations] = useState([]);
   const [isFocus, setFocus] = useState(false);
   const suggestionRef = useRef(null);
@@ -54,7 +55,7 @@ const SearchField = (props) => {
         className='input__suggestion-option'
         onClick={() => _onSelect(woeid)}
       >
-        <div className='input__suggestion-text'>
+        <div className='input__suggestion-text--option'>
           {title} {location_type}
         </div>
       </div>
@@ -74,9 +75,13 @@ const SearchField = (props) => {
         onFocus={_onFocus}
         placeholder='Search'
       />
-      {locations.length > 0 && isFocus && (
+      {value.length > 0 && isFocus && (
         <div className='input__suggestion-wrapper' ref={suggestionRef}>
-          {locationSelection}
+          {!loading && ( locationSelection.length > 0
+            ? locationSelection
+            : <div className='input__suggestion-text--not-found'>Location not found!</div>)
+          }
+          {loading && <LoadingSpinner loaderClassName='loading-spinner__loader--search'/>}
         </div>
       )}
     </InputGroup>
@@ -89,6 +94,7 @@ SearchField.propTypes = {
   onChange: PropTypes.func,
   onSelect: PropTypes.func,
   queryResults: PropTypes.array,
+  loading: PropTypes.bool
 };
 
 SearchField.defaultProps = {
@@ -97,6 +103,7 @@ SearchField.defaultProps = {
   onChange: noop,
   onSelect: noop,
   queryResults: [],
+  loading: false
 };
 
 export default SearchField;

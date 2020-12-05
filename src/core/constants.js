@@ -4,7 +4,9 @@ export const ENTER_KEY_CODE = 13;
 
 export const ACTION_TYPES = keyMirror({
   QUERY_LOCATION: null,
-  GET_WEATHER_INFORMATION: null
+  GET_WEATHER_INFORMATION: null,
+  SET_QUERY_LOADING: null,
+  SET_SELECT_LOCATION_LOADING: null,
 });
 
 const BASE_URL = 'https://www.metaweather.com'

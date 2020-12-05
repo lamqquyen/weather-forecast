@@ -17,3 +17,6 @@ export const query = (keyword) => async (dispatch) => {
   })
 }
 
+export const setQueryLoading = () => {
+  return {type: ACTION_TYPES.SET_QUERY_LOADING, payload: null}
+}

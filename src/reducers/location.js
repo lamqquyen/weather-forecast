@@ -1,16 +1,25 @@
 import {ACTION_TYPES} from '../core/constants'
 
 const initialState = {
-  queryResults: []
+  queryResults: [],
+  loading: false
 }
 
-export default function (state = initialState, {type, payload}) {
+export default (state = initialState, {type, payload}) => {
   switch (type) {
     case ACTION_TYPES.QUERY_LOCATION:
-      state.queryResults = [...payload]
-      return state
+      state = {
+        ...state,
+        queryResults: payload,
+        loading: false
+      }
+      break
+    case ACTION_TYPES.SET_QUERY_LOADING:
+      state.loading = true
+      break
     default:
-      return state
+      break
   }
 
+  return state
 }

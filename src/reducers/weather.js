@@ -7,10 +7,10 @@ const initialState = {
 export default function (state = initialState, {type, payload}) {
   switch (type) {
     case ACTION_TYPES.GET_WEATHER_INFORMATION:
-      state.info = {...payload}
-      return state
+      state = {...state, info: payload}
     default:
-      return state
+      break;
   }
 
+  return state
 }

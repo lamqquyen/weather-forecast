@@ -4,13 +4,15 @@ import WeatherBlock from '../../components/weather-block'
 import './style.css'
 import {Row, Col} from 'react-bootstrap'
 import {useDispatch, useSelector} from 'react-redux'
-import {query} from '../../actions/location'
+import {query, setQueryLoading} from '../../actions/location'
 import {getWeatherInformation} from '../../actions/weather'
 import {debounce} from 'lodash'
+import LoadingSpinner from '../../components/loading-spinner'
 
 const WeatherForecastCard = () => {
   const [keyword, setKeyword] = useState('')
-  const queryResults = useSelector(state => state.location.queryResults)
+  const [loading, setLoading] = useState(false)
+  const {queryResults, loading: locationLoading} = useSelector(state => state.location)
   const weatherInfo = useSelector(state => state.weather.info)
   const dispatch = useDispatch()
   
@@ -23,16 +25,22 @@ const WeatherForecastCard = () => {
   , [])
 
   const _onType = (e) => {
-    setKeyword(e.target.value)    
+    setKeyword(e.target.value)
+    dispatch(setQueryLoading())
   }
 
   const _onSelect = (woeid) => {
+    setLoading(true)
     dispatch(getWeatherInformation(woeid))
   }
 
   useEffect(() => {
     onDebouncedQuery(keyword)
   }, [keyword, onDebouncedQuery])
+
+  useEffect(() => {
+    setLoading(false)
+  }, [weatherInfo])
 
   return (
     <div className='weather-forecast__wrapper'>
@@ -45,6 +53,7 @@ const WeatherForecastCard = () => {
             onSelect={_onSelect}
             value={keyword}
             queryResults={queryResults}
+            loading={locationLoading}
           />
         </Col>
       </Row>
@@ -53,6 +62,12 @@ const WeatherForecastCard = () => {
           <WeatherBlock info={weatherInfo}/>
         </Col>
       </Row>
+      {loading &&
+        <LoadingSpinner
+          loaderClassName='loading-spinner__loader--weather-block'
+          wrapperClassName='loading-spinner__wrapper--weather-block'
+        />
+      }
     </div>
   )
 }

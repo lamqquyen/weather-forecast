@@ -16,4 +16,3 @@ export const getWeatherInformation = (woeid) => async (dispatch) => {
     dispatch({type: ACTION_TYPES.GET_WEATHER_INFORMATION, payload: weatherInfo})
   })
 }
-
