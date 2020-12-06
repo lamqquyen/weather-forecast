@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 import './style.css'
-import {noop, get} from 'lodash'
+import {get} from 'lodash'
 import WeatherCard from './weather-card'
 import WeatherInfo from './weather-info'
 
