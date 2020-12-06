@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchField renders correctly with loading is false 1`] = `
+<div
+  className="input-group"
+>
+  <div
+    className="input-group-prepend"
+  >
+    <span
+      className="input-group-text"
+      id="basic-addon1"
+    >
+      <i
+        className="fa fa-search"
+      />
+    </span>
+  </div>
+  <input
+    className="form-control"
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Search"
+    value=""
+  />
+</div>
+`;
+
+exports[`SearchField renders correctly with loading is true 1`] = `
+<div
+  className="input-group"
+>
+  <div
+    className="input-group-prepend"
+  >
+    <span
+      className="input-group-text"
+      id="basic-addon1"
+    >
+      <i
+        className="fa fa-search"
+      />
+    </span>
+  </div>
+  <input
+    className="form-control"
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder="Search"
+    value=""
+  />
+</div>
+`;

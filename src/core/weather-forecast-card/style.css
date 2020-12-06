@@ -1,0 +1,20 @@
+.weather-forecast__wrapper {
+  margin: 0px auto;
+  padding: 20px;
+  position: relative;
+  display: block;
+  background-color:rgba(255, 255, 255, 0.5);
+  border: 0px solid transparent;
+  border-radius: 8px;
+  width: 1000px;
+  height: auto;
+  text-align: center;
+}
+
+.weather-forecast__title {
+  color: rgb(50 91 101);
+}
+
+.weather-forecast__input {
+  margin: 20px 0;
+}

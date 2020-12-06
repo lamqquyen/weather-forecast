@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherBlock renders correctly 1`] = `
+<div
+  className="weather-block__wrapper"
+>
+  <div
+    className="weather-info__wrapper"
+  >
+    <div
+      className="weather-info__wrapper--left"
+      md={6}
+    >
+      <div
+        className="weather-info__text--location"
+      >
+         
+      </div>
+      <div
+        className="weather-info__text--day"
+      >
+        Monday, 06 December 2020
+      </div>
+      <div
+        className="weather-info__text--state-name"
+      >
+        Heavy Cloud
+      </div>
+    </div>
+    <div
+      className="weather-info__wrapper--right"
+      md={6}
+    >
+      <div
+        className="weather-info__info-wrapper"
+      >
+        <div>
+          Humidity: 
+          49
+          %
+        </div>
+        <div>
+          Wind: 
+          4.55
+           mph
+        </div>
+        <div>
+          Air Pressure: 
+          1024.5
+           mbar
+        </div>
+        <div>
+          Visibility: 
+          17.01
+           miles
+        </div>
+      </div>
+      <div>
+        <img
+          className="weather-info__icon"
+          src="https://www.metaweather.com/static/img/weather/hc.svg"
+        />
+        <div
+          className="weather-info__text--temperature"
+        >
+          16
+          °C
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="weather-block__cards-wrapper"
+  >
+    <div
+      className="weather-card__wrapper weather-card__wrapper--selected"
+      onClick={[Function]}
+    >
+      <div
+        className="weather-card__text--day"
+      >
+        MON
+      </div>
+      <div
+        className="weather-card__text--date"
+      >
+        12 - 06
+      </div>
+      <img
+        className="weather-card__icon"
+        src="https://www.metaweather.com/static/img/weather/hc.svg"
+      />
+      <div
+        className="weather-card__temperature-wrapper"
+      >
+        <div
+          className="weather-card__text--max-temperature"
+        >
+          16
+          °
+        </div>
+        <div
+          className="weather-card__text--min-temperature"
+        >
+          5
+          °
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

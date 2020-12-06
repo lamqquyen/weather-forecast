@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingSpinner renders correctly with loading is true 1`] = `
+<div
+  className="loading-spinner__wrapper"
+>
+  <div
+    className="loading-spinner__loader"
+  />
+</div>
+`;

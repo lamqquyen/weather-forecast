@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchSuggestion renders correctly with loading is false 1`] = `
+<div
+  className="search-suggestion__wrapper"
+>
+  <div
+    className="search-suggestion__text--not-found"
+  >
+    Location not found!
+  </div>
+</div>
+`;
+
+exports[`SearchSuggestion renders correctly with loading is true 1`] = `
+<div
+  className="search-suggestion__wrapper"
+>
+  <div
+    className="loading-spinner__wrapper"
+  >
+    <div
+      className="loading-spinner__loader loading-spinner__loader--search"
+    />
+  </div>
+</div>
+`;
