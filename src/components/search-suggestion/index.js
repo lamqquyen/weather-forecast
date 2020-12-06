@@ -5,10 +5,10 @@ import LoadingSpinner from '../loading-spinner'
 
 const SearchSuggestion = React.forwardRef(({loading, locationSelection}, ref) => {
   return (
-    <div className='input__suggestion-wrapper' ref={ref}>
+    <div className='search-suggestion__wrapper' ref={ref}>
       {!loading && ( locationSelection.length > 0
         ? locationSelection
-        : <div className='input__suggestion-text--not-found'>Location not found!</div>)
+        : <div className='search-suggestion__text--not-found'>Location not found!</div>)
       }
       <LoadingSpinner loading={loading} loaderClassName='loading-spinner__loader--search'/>
     </div>
