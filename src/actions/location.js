@@ -1,19 +1,19 @@
-import {ACTION_TYPES, API_URL} from "../core/constants"
+import {ACTION_TYPES, API_URL} from '../core/constants'
 
 export const query = (keyword) => async (dispatch) => {
-  fetch(
+  return fetch(
     `${API_URL.SEARCH}?query=${encodeURIComponent(keyword)}`,
     {
       method: 'GET',
       headers: {
-        "content-type": "application/json",
-        "accept": "application/json"
+        'content-type': 'application/json',
+        'accept': 'application/json'
       }
     }
   )
   .then(response => response.json())
   .then(queryResults => {
-    dispatch({type: ACTION_TYPES.QUERY_LOCATION, payload: queryResults})
+   return dispatch({type: ACTION_TYPES.QUERY_LOCATION, payload: queryResults})
   })
 }
 

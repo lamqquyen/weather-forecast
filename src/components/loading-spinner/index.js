@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './style.css'
 
-const LoadingSpinner = ({wrapperClassName, loaderClassName}) => {
+const LoadingSpinner = ({wrapperClassName, loaderClassName, loading}) => {
 
   return (
-    <div className = {classNames(['loading-spinner__wrapper', wrapperClassName])} >
-      <div className={classNames(['loading-spinner__loader', loaderClassName])} />
-    </div>
+    loading && (<div className = {classNames(['loading-spinner__wrapper', wrapperClassName])} >
+        <div className={classNames(['loading-spinner__loader', loaderClassName])} />
+      </div>
+    )
   )
 };
 

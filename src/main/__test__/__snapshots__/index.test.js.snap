@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main renders correctly 1`] = `
+<div
+  className="main__wrapper"
+>
+  <div
+    className="weather-forecast__wrapper"
+  >
+    <h2
+      className="weather-forecast__title"
+    >
+      WEATHER FORECAST
+    </h2>
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-4 offset-md-1"
+      >
+        <div
+          className="weather-forecast__input input-group"
+        >
+          <div
+            className="input-group-prepend"
+          >
+            <span
+              className="input-group-text"
+              id="basic-addon1"
+            >
+              <i
+                className="fa fa-search"
+              />
+            </span>
+          </div>
+          <input
+            className="form-control"
+            onChange={[Function]}
+            onFocus={[Function]}
+            placeholder="Search"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-10 offset-md-1"
+      >
+        <div
+          className="weather-block__wrapper"
+        >
+          <div>
+            Search a location to get weather informations
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

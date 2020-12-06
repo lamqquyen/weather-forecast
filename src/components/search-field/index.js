@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {InputGroup, FormControl} from 'react-bootstrap'
 import './style.css';
 import {noop} from 'lodash'
-import LoadingSpinner from '../loading-spinner'
+import SearchSuggestion from '../search-suggestion'
 
 const SearchField = (props) => {
   const {className, value, onChange, onSelect, queryResults, loading} = props;
@@ -76,13 +76,11 @@ const SearchField = (props) => {
         placeholder='Search'
       />
       {value.length > 0 && isFocus && (
-        <div className='input__suggestion-wrapper' ref={suggestionRef}>
-          {!loading && ( locationSelection.length > 0
-            ? locationSelection
-            : <div className='input__suggestion-text--not-found'>Location not found!</div>)
-          }
-          {loading && <LoadingSpinner loaderClassName='loading-spinner__loader--search'/>}
-        </div>
+        <SearchSuggestion
+          loading={loading}
+          ref={suggestionRef}
+          locationSelection={locationSelection}
+        />
       )}
     </InputGroup>
   );

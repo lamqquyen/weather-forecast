@@ -62,12 +62,11 @@ const WeatherForecastCard = () => {
           <WeatherBlock info={weatherInfo}/>
         </Col>
       </Row>
-      {loading &&
-        <LoadingSpinner
-          loaderClassName='loading-spinner__loader--weather-block'
-          wrapperClassName='loading-spinner__wrapper--weather-block'
-        />
-      }
+      <LoadingSpinner
+        loading={loading}
+        loaderClassName='loading-spinner__loader--weather-block'
+        wrapperClassName='loading-spinner__wrapper--weather-block'
+      />
     </div>
   )
 }

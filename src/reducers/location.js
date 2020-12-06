@@ -15,7 +15,10 @@ export default (state = initialState, {type, payload}) => {
       }
       break
     case ACTION_TYPES.SET_QUERY_LOADING:
-      state.loading = true
+      state = {
+        ...state,
+        loading: true
+      }
       break
     default:
       break
