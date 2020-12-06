@@ -4,13 +4,17 @@ const initialState = {
   info: {}
 }
 
-export default function (state = initialState, {type, payload}) {
+const reducer = (state = initialState, {type, payload}) => {
   switch (type) {
     case ACTION_TYPES.GET_WEATHER_INFORMATION:
       state = {...state, info: payload}
+      break
+
     default:
-      break;
+      break
   }
 
   return state
 }
+
+export default reducer
