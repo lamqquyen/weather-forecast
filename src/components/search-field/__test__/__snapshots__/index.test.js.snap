@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchField renders correctly 1`] = `
+exports[`SearchField renders correctly with loading is false 1`] = `
 <div
   className="input-group"
 >

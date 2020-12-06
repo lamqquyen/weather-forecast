@@ -4,7 +4,7 @@ import TestRenderer from "react-test-renderer";
 import {FormControl} from "react-bootstrap";
 
 describe("SearchField", () => {
-  it("renders correctly", () => {
+  it("renders correctly with loading is false", () => {
     const tree = TestRenderer.create(<SearchField />).toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe("SearchField", () => {
       formControl.props.onFocus()
     })
 
-    const suggestionBlock = tree.findByProps({className: "input__suggestion-wrapper"})
+    const suggestionBlock = tree.findByProps({className: 'search-suggestion__wrapper'})
 
     expect(suggestionBlock).not.toBeNull()
   });
