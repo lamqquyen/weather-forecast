@@ -4,10 +4,12 @@ const app = express();
 const axios = require('axios');
 const cors = require('cors');
 
+const BASE_API_URL = 'https://www.metaweather.com/api/location'
+
 app.get('/search', async (req, res) => {
   try {
     const {query} = req.query
-    const request = `https://www.metaweather.com/api/location/search/?query=${query}`;
+    const request = `${BASE_API_URL}/search/?query=${query}`;
     const result = await axios.get(request);
     res.send(result.data);
   } catch (error) {
@@ -19,7 +21,7 @@ app.get('/search', async (req, res) => {
 app.get('/weather/:woeid', async (req, res) => {
   try {
     const {woeid} = req.params
-    const request = `https://www.metaweather.com/api/location/${woeid}/`;
+    const request = `${BASE_API_URL}/${woeid}/`;
     const result = await axios.get(request);
     res.send(result.data);
   } catch (error) {
