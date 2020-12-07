@@ -18,7 +18,7 @@ const WeatherInfo = (props) => {
 
   return (
     <div className='weather-info__wrapper'>
-      <div className='weather-info__wrapper--left' md={6}>
+      <div className='weather-info__wrapper--left'>
         <div className='weather-info__text--location'>
           {location.title} {location.type}
         </div>
@@ -29,14 +29,14 @@ const WeatherInfo = (props) => {
           {weather.weather_state_name}
         </div>
       </div>
-      <div className='weather-info__wrapper--right' md={6}>
+      <div className='weather-info__wrapper--right'>
         <div className='weather-info__info-wrapper'>
           <div>Humidity: {weather.humidity}%</div>
           <div>Wind: {Math.round(weather.wind_speed * 100) / 100} mph</div>
           <div>Air Pressure: {Math.round(weather.air_pressure * 100) / 100} mbar</div>
           <div>Visibility: {Math.round(weather.visibility * 100) / 100} miles</div>
         </div>
-        <div>
+        <div style={{width: '35%'}}>
           <img className='weather-info__icon'
             src={ICON_URL.replace('{:weather_state_abbr}', weather.weather_state_abbr)}/>
           <div className='weather-info__text--temperature'>

@@ -69,6 +69,7 @@
 
 .weather-info__wrapper--left {
   text-align: left;
+  width: 50%;
 }
 
 .weather-info__icon {
@@ -97,6 +98,7 @@
 
 .weather-info__wrapper--right {
   display: flex;
+  width: 50%;
 }
 
 .weather-info__info-wrapper {
