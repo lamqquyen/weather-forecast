@@ -20,7 +20,7 @@ export const HEADERS = {
 
 export const API_URL = {
   SEARCH: `/search/`,
-  LOCATION_WEATHER_FORECAST: `/{:woeid}/`
+  LOCATION_WEATHER_FORECAST: `/weather/{:woeid}/`
 };
 
 
