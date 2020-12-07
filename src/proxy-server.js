@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const BASE_API_URL = 'https://www.metaweather.com/api/location'
 
-app.get('/search', async (req, res) => {
+app.get('/api/search', async (req, res) => {
   try {
     const {query} = req.query
     const request = `${BASE_API_URL}/search/?query=${query}`;
@@ -18,7 +18,7 @@ app.get('/search', async (req, res) => {
 });
 
 
-app.get('/weather/:woeid', async (req, res) => {
+app.get('/api/weather/:woeid', async (req, res) => {
   try {
     const {woeid} = req.params
     const request = `${BASE_API_URL}/${woeid}/`;

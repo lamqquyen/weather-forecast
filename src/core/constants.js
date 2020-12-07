@@ -19,8 +19,8 @@ export const HEADERS = {
 
 
 export const API_URL = {
-  SEARCH: `/search/`,
-  LOCATION_WEATHER_FORECAST: `/weather/{:woeid}/`
+  SEARCH: `/api/search/`,
+  LOCATION_WEATHER_FORECAST: `/api/weather/{:woeid}/`
 };
 
 
