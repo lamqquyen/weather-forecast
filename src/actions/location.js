@@ -1,17 +1,16 @@
 import {ACTION_TYPES, API_URL, HEADERS} from '../core/constants'
+import axios from 'axios'
 
 export const query = (keyword) => async (dispatch) => {
-  return fetch(
+  const result = await axios.get(
     `${API_URL.SEARCH}?query=${encodeURIComponent(keyword)}`,
     {
       method: 'GET',
       headers: HEADERS
     }
   )
-  .then(response => response.json())
-  .then(queryResults => {
-   return dispatch({type: ACTION_TYPES.QUERY_LOCATION, payload: queryResults})
-  })
+
+  return dispatch({type: ACTION_TYPES.QUERY_LOCATION, payload: result.data})
 }
 
 export const setQueryLoading = () => {
