@@ -25,3 +25,9 @@ export PORT = 3000
 Launches the test runner in the interactive watch mode.
 
 docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+## Additional Information:
+- The application using public API `https://www.metaweather.com/api/` to get data
+- Proxy-server is built to handle CORS issues of public API `https://www.metaweather.com/api/` when fetching it.
+
+
