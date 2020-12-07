@@ -30,4 +30,5 @@ docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/ad
 - The application using public API `https://www.metaweather.com/api/` to get data
 - Proxy-server is built to handle CORS issues of public API `https://www.metaweather.com/api/` when fetching it.
 
-
+## Heroku deployed website of this application
+```https://weather-forecast-ql.herokuapp.com/``` 
