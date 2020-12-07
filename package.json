@@ -7,6 +7,9 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^1.0.6",
     "keymirror": "^0.1.1",
     "lodash": "^4.17.20",
     "node-fetch": "^2.6.1",
@@ -21,8 +24,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start-client": "react-scripts start",
+    "start": "cd src && node proxy-server.js",
+    "build": "react-scripts build && yarn install",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

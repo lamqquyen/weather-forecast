@@ -9,15 +9,22 @@ export const ACTION_TYPES = keyMirror({
   SET_SELECT_LOCATION_LOADING: null,
 });
 
-const BASE_URL = 'https://www.metaweather.com'
-const BASE_API_URL = `${BASE_URL}/api/location`
+
+export const HEADERS = {
+  'content-type': 'application/json',
+  'accept': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': '*'
+}
 
 
 export const API_URL = {
-  SEARCH: `${BASE_API_URL}/search/`,
-  LOCATION_WEATHER_FORECAST: `${BASE_API_URL}/{:woeid}/`
+  SEARCH: `/search/`,
+  LOCATION_WEATHER_FORECAST: `/{:woeid}/`
 };
 
+
+const BASE_URL = 'https://www.metaweather.com'
 export const ICON_URL = `${BASE_URL}/static/img/weather/{:weather_state_abbr}.svg`
 
 export const DAYS_OF_WEEK = {
