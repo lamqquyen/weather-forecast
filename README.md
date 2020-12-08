@@ -6,7 +6,7 @@ In the project directory, you can run:
 
 ### `yarn build`
 
-Builds the app to the `build` folder and install all dependencies.\
+Builds the app to the `build` folder and install all dependencies.
 
 ### `yarn start`
 
@@ -23,8 +23,6 @@ export PORT = 3000
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.
-
-docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ## Additional Information:
 - The application using public API `https://www.metaweather.com/api/` to get data
