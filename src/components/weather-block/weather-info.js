@@ -20,7 +20,7 @@ const WeatherInfo = (props) => {
     <div className='weather-info__wrapper'>
       <div className='weather-info__wrapper--left'>
         <div className='weather-info__text--location'>
-          {location.title} {location.type}
+          {location.title}
         </div>
         <div className='weather-info__text--day'>
           {_getDate()}

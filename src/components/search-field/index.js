@@ -56,7 +56,7 @@ const SearchField = (props) => {
         onClick={() => _onSelect(woeid)}
       >
         <div className='input__suggestion-text--option'>
-          {title} {location_type}
+          {title}
         </div>
       </div>
     );

@@ -28,8 +28,8 @@ const BASE_URL = 'https://www.metaweather.com'
 export const ICON_URL = `${BASE_URL}/static/img/weather/{:weather_state_abbr}.svg`
 
 export const DAYS_OF_WEEK = {
-  SHORT: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-  LONG: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  SHORT: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+  LONG: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 }
 
 export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
