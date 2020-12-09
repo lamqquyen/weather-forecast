@@ -1,5 +1,9 @@
 # Getting Started with Weather Forecast App
 
+## Requirement
+
+NodeJS version 10+
+
 ## Available Scripts
 
 In the project directory, you can run:
