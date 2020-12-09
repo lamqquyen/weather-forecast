@@ -1,6 +1,6 @@
 # Getting Started with Weather Forecast App
 
-## Requirement
+## Prerequisite
 
 NodeJS version 10+
 
